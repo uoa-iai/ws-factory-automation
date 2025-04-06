@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workshop Landing Page</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo.svg" type="image/svg" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 40px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header,
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 700;
+            color: #222;
+        }
+
+        header p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        section {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #444;
+            border-left: 4px solid #007acc;
+            padding-left: 10px;
+        }
+
+        /* Paragraphs styling */
+        .section-paragraph {
+            margin-bottom: 1em;
+            text-align: justify;
+        }
+
+        /* Bullet list styling */
+        .section-bullets {
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+        /* Format list */
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Schedule list cards */
+        #schedule-list li {
+            background: #e7f1fa;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .speaker {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .talk-title {
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Organizers section using Flexbox */
+        #organizers-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .organizer {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 220px;
+        }
+
+        .organizer img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .organizer p {
+            margin: 5px 0;
+        }
+
+        .organizer a {
+            color: #007acc;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer {
+            font-size: 0.9em;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="website-title">Loading Workshop Title...</h1>
+            <p id="workshop-date"></p>
+            <p id="workshop-venue"></p>
+        </header>
+
+        <!-- Workshop Overview Section -->
+        <section id="overview">
+            <h2>Workshop Overview</h2>
+            <div id="overview-paragraphs"></div>
+        </section>
+
+        <!-- Why Needed Section -->
+        <section id="why-needed">
+            <h2>Why This Workshop Is Needed</h2>
+            <div id="why-needed-paragraphs"></div>
+            <ul id="why-needed-bullets" class="section-bullets"></ul>
+        </section>
+
+        <!-- Format Section -->
+        <section id="format">
+            <h2>Format</h2>
+            <ul id="format-list">
+                <!-- Format details will be added here -->
+            </ul>
+        </section>
+
+        <!-- Call for Contributions Section -->
+        <section id="call-for-contributions">
+            <h2>Call for Contributions</h2>
+            <p id="call-for-contributions-text">Loading submission details...</p>
+            <p id="call-for-contributions-link"></p>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule">
+            <h2>Schedule</h2>
+            <ul id="schedule-list">
+                <!-- Schedule items will be added here -->
+            </ul>
+        </section>
+
+        <!-- Organizers Section -->
+        <section id="organizers">
+            <h2>Organizers</h2>
+            <div id="organizers-list">
+                <!-- Organizer profiles will be added here -->
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                <span style="font-size:1.2em;">&#9993;</span>
+                <span style="margin: 0 10px;">&#9742;</span>
+                Contact us: <a id="contact-email" href="mailto:">Loading contact...</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        fetch('data/content.json')
+            .then(response => response.json())
+            .then(data => {
+                // Header
+                document.getElementById('website-title').textContent = data.website_title;
+                document.getElementById('workshop-date').textContent = data.date;
+                document.getElementById('workshop-venue').textContent = data.venue;
+
+                // Workshop Overview: Render paragraphs with bullet list inserted after the first paragraph
+                const overviewContainer = document.getElementById('overview-paragraphs');
+                const overviewData = data.workshop_overview;
+                if (overviewData.paragraphs.length > 0) {
+                    // Append remaining paragraphs (if any)
+                    for (let i = 0; i < overviewData.paragraphs.length; i++) {
+                        if (overviewData.bullets && overviewData.bullets.length > 0 && i === data.workshop_overview.bullets_index) {
+                            const bulletList = document.createElement('ul');
+                            bulletList.className = 'section-bullets';
+                            overviewData.bullets.forEach(item => {
+                                const li = document.createElement('li');
+                                li.textContent = item;
+                                bulletList.appendChild(li);
+                            });
+                            overviewContainer.appendChild(bulletList);
+                        }
+                        const p = document.createElement('p');
+                        p.className = 'section-paragraph';
+                        p.textContent = overviewData.paragraphs[i];
+                        overviewContainer.appendChild(p);
+                    }
+                } else if (overviewData.bullets && overviewData.bullets.length > 0) {
+                    const bulletList = document.createElement('ul');
+                    bulletList.className = 'section-bullets';
+                    overviewData.bullets.forEach(item => {
+                        const li = document.createElement('li');
+                        li.textContent = item;
+                        bulletList.appendChild(li);
+                    });
+                    overviewContainer.appendChild(bulletList);
+                }
+
+                // Why Needed Section
+                const whyNeededContainer = document.getElementById('why-needed-paragraphs');
+                data.why_needed.paragraphs.forEach(text => {
+                    const p = document.createElement('p');
+                    p.className = 'section-paragraph';
+                    p.textContent = text;
+                    whyNeededContainer.appendChild(p);
+                });
+                if (data.why_needed.bullets && data.why_needed.bullets.length > 0) {
+                    const whyNeededBullets = document.getElementById('why-needed-bullets');
+                    data.why_needed.bullets.forEach(item => {
+                        const li = document.createElement('li');
+                        li.textContent = item;
+                        whyNeededBullets.appendChild(li);
+                    });
+                }
+
+                // Format Section
+                const formatList = document.getElementById('format-list');
+                for (const [key, value] of Object.entries(data.format)) {
+                    const li = document.createElement('li');
+                    const label = key.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+                    li.innerHTML = `<strong>${label}:</strong> ${value}`;
+                    formatList.appendChild(li);
+                }
+
+                // Call for Contributions Section
+                document.getElementById('call-for-contributions-text').textContent = data.call_for_contributions;
+                const contributionsLink = document.getElementById('call-for-contributions-link');
+                const link = document.createElement('a');
+                link.href = data.call_for_contributions_link.url;
+                link.textContent = data.call_for_contributions_link.text;
+                link.style.color = "#007acc";
+                contributionsLink.appendChild(link);
+
+                // Schedule Section: Separate rows for speaker and talk title
+                const scheduleList = document.getElementById('schedule-list');
+                data.schedule.forEach(item => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<div class="speaker">${item.speaker}</div><div class="talk-title">${item.talk_title}</div>`;
+                    scheduleList.appendChild(li);
+                });
+
+                // Organizers Section
+                const organizersDiv = document.getElementById('organizers-list');
+                data.organizers.forEach(org => {
+                    const div = document.createElement('div');
+                    div.className = 'organizer';
+
+                    const img = document.createElement('img');
+                    img.src = org.photo;
+                    img.alt = org.name;
+
+                    const name = document.createElement('p');
+                    name.textContent = org.name;
+
+                    const position = document.createElement('p');
+                    position.textContent = org.position;
+
+                    const university = document.createElement('p');
+                    university.textContent = org.university;
+
+                    const email = document.createElement('a');
+                    email.href = `mailto:${org.email}`;
+                    email.textContent = org.email;
+
+                    div.appendChild(img);
+                    div.appendChild(name);
+                    div.appendChild(position);
+                    div.appendChild(university);
+                    div.appendChild(email);
+                    organizersDiv.appendChild(div);
+                });
+
+                // Footer
+                const contactEmail = document.getElementById('contact-email');
+                contactEmail.href = `mailto:${data.footer.contact_email}`;
+                contactEmail.textContent = data.footer.contact_email;
+            })
+            .catch(err => {
+                console.error('Error loading JSON content:', err);
+            });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+{
+  "website_title": "1st Workshop on Robust Machine Intelligence for Factory Automation",
+  "date": "21st August 2025",
+  "venue": "xxxx, as part of 2025 IEEE CASE Conference Programme, LA, US",
+  "workshop_overview": {
+    "paragraphs": [
+      "The workshop on Robust Machine Intelligence for Factory Automation brings together researchers and practitioners from machine learning and automation domains to address a critical challenge: developing trustworthy machine learning technologies for mission-critical factory operations. As manufacturing environments become increasingly complex and dynamic, there is an urgent need to bridge the gap between cutting-edge AI advancements and practical industrial applications.",
+      "Our primary objective is to catalyze a collaborative dialogue that sparks innovative approaches to machine intelligence in factory automation. By creating a platform for cross-disciplinary knowledge exchange, we aim to:",
+      "Through a diverse range of interactive sessions—including expert talks, lightning presentations, and facilitated discussions—we will collectively chart a roadmap for transforming factory operations. The workshop seeks to reimagine production systems as more intelligent, responsive, and human-centric, capable of meeting the complex technological and societal demands of the future.",
+      "Ultimately, we aspire to accelerate the development of machine learning technologies that can navigate the unprecedented challenges of modern factory environments, paving the way for more sustainable, resilient, and innovative manufacturing ecosystems."
+    ],
+    "bullets": [
+      "Highlight research challenges in designing AI systems for industrial settings",
+      "Explore emerging methodologies for robust and adaptive intelligent systems",
+      "Develop a shared vision for future research and development"
+    ],
+    "bullets_index": 2
+  },
+  "why_needed": {
+    "paragraphs": [
+      "Machine learning is significantly transforming not only how we live but also how we create. Factories, traditionally perceived as dangerous, dirty, and dull environments, are now facing unprecedented opportunities. Physical sensors, machines, factory automation systems, and production networks all stand to benefit from the unique capabilities of advanced machine learning techniques. This integration will enable future factories to develop autonomous sensing, reasoning, memory, and collaboration capabilities—allowing them to produce in more sustainable, resilient, and human-friendly ways.",
+      "This vision will fundamentally impact future jobs and tasks in manufacturing environments and reshape the form and human interaction mechanisms of factory machines and systems. However, the exact manifestation of these changes remains uncertain and requires imagination to fully envision."
+    ]
+  },
+  "format": {
+    "invited_talks": "Leading expert providing overview of the latest research trends in the area.",
+    "lightning_talks": "Short and fun sharing of technological advancements.",
+    "rapid_fire_talks": "Preview of exciting research projects to build connections.",
+    "tech_tasters": "Interactive conversation session with technology showcase (poster, physical prototype display, digital system demo etc.) including tea break arrangements.",
+    "facilitated_discussion": "Identify key challenges and opportunities in developing robust machine intelligence technologies towards factories of the future and outline potential collaborative initiatives."
+  },
+  "call_for_contributions": "We invite submissions to our workshop to join one of the sessions. Please fill in the Microsoft Office form provided.",
+  "call_for_contributions_link": {
+    "text": "Submit your proposal here",
+    "url": "https://example.com/submit"
+  },
+  "schedule": [
+    {
+      "speaker": "Speaker Name 1",
+      "talk_title": "Talk Title 1"
+    },
+    {
+      "speaker": "Speaker Name 2",
+      "talk_title": "Talk Title 2"
+    },
+    {
+      "speaker": "Speaker Name 3",
+      "talk_title": "Talk Title 3"
+    }
+  ],
+  "organizers": [
+    {
+      "name": "Yuqian Lu",
+      "position": "Senior Lecturer",
+      "university": "The University of Auckland",
+      "email": "yuqian.lu@auckland.ac.nz",
+      "photo": "assets/organizers/yuqian-lu.jpg"
+    },
+    {
+      "name": "Hyun-Jung Kim",
+      "position": "Associate Professor",
+      "university": "KAIST",
+      "email": "hyunjungkim@kaist.ac.kr",
+      "photo": "assets/organizers/hyun-jung-kim.jpg"
+    },
+    {
+      "name": "Bing Yan",
+      "position": "Assistant Professor",
+      "university": "Rochester Institute of Technology",
+      "email": "bxyeee@rit.edu",
+      "photo": "assets/organizers/bing-yan.jpg"
+    },
+    {
+      "name": "Ilya Kovalenko",
+      "position": "Professor",
+      "university": "Pennsylvania State University",
+      "email": "iqk5135@psu.edu",
+      "photo": "assets/organizers/ilya-kovalenko.jpg"
+    }
+  ],
+  "footer": {
+    "contact_email": "contact@yourworkshop.org"
+  }
+}
