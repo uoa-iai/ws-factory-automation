@@ -179,11 +179,12 @@
         </section>
 
         <!-- Call for Contributions Section -->
-        <section id="call-for-contributions">
+        <!--<section id="call-for-contributions">
             <h2>Call for Contributions</h2>
             <p id="call-for-contributions-text">Loading submission details...</p>
             <p id="call-for-contributions-link"></p>
         </section>
+    -->
 
         <!-- Schedule Section -->
         <section id="schedule">
@@ -278,13 +279,13 @@
                 }
 
                 // Call for Contributions Section
-                document.getElementById('call-for-contributions-text').textContent = data.call_for_contributions;
-                const contributionsLink = document.getElementById('call-for-contributions-link');
-                const link = document.createElement('a');
-                link.href = data.call_for_contributions_link.url;
-                link.textContent = data.call_for_contributions_link.text;
-                link.style.color = "#007acc";
-                contributionsLink.appendChild(link);
+                //document.getElementById('call-for-contributions-text').textContent = data.call_for_contributions;
+                //const contributionsLink = document.getElementById('call-for-contributions-link');
+                //const link = document.createElement('a');
+                //link.href = data.call_for_contributions_link.url;
+                //link.textContent = data.call_for_contributions_link.text;
+                //link.style.color = "#007acc";
+                //contributionsLink.appendChild(link);
 
                 // Schedule Section: Separate rows for speaker and talk title
                 const scheduleList = document.getElementById('schedule-list');
