@@ -1,7 +1,7 @@
 {
   "website_title": "1st Workshop on Robust Machine Intelligence for Factory Automation",
   "date": "21st August 2025",
-  "venue": "xxxx, as part of 2025 IEEE CASE Conference Programme, LA, US",
+  "venue": "As part of 2025 21st IEEE Conference on Automation Science and Engineering, Los Angeles, US",
   "workshop_overview": {
     "paragraphs": [
       "The workshop on Robust Machine Intelligence for Factory Automation brings together researchers and practitioners from machine learning and automation domains to address a critical challenge: developing trustworthy machine learning technologies for mission-critical factory operations. As manufacturing environments become increasingly complex and dynamic, there is an urgent need to bridge the gap between cutting-edge AI advancements and practical industrial applications.",
@@ -24,15 +24,8 @@
   },
   "format": {
     "invited_talks": "Leading expert providing overview of the latest research trends in the area.",
-    "lightning_talks": "Short and fun sharing of technological advancements.",
-    "rapid_fire_talks": "Preview of exciting research projects to build connections.",
-    "tech_tasters": "Interactive conversation session with technology showcase (poster, physical prototype display, digital system demo etc.) including tea break arrangements.",
-    "facilitated_discussion": "Identify key challenges and opportunities in developing robust machine intelligence technologies towards factories of the future and outline potential collaborative initiatives."
-  },
-  "call_for_contributions": "We invite submissions to our workshop to join one of the sessions. Please fill in the Microsoft Office form provided.",
-  "call_for_contributions_link": {
-    "text": "Submit your proposal here",
-    "url": "https://example.com/submit"
+    "rapid_fire_talks": "Short and fun sharing of exciting research projects to build connections.",
+    "facilitated_discussion": "Brainstorm shared agenda for collaborative efforts and future workshop planning."
   },
   "schedule": [
     {
@@ -79,6 +72,6 @@
     }
   ],
   "footer": {
-    "contact_email": "contact@yourworkshop.org"
+    "contact_email": "yuqian.lu@auckland.ac.nz"
   }
 }
