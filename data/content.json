@@ -23,13 +23,13 @@
     ]
   },
   "format": {
-    "invited_talks": "Leading expert providing overview of the latest research trends in the area.",
+    "expert_talks": "Leading expert providing overview of the latest research trends in the area.",
     "rapid_fire_talks": "Short and fun sharing of exciting research projects to build connections.",
     "facilitated_discussion": "Brainstorm shared agenda for collaborative efforts and future workshop planning."
   },
   "schedule": [
     {
-      "speaker": "Invited Speaker 1",
+      "speaker": "Expert Speaker 1",
       "talk_title": "Talk Title 1"
     },
     {
